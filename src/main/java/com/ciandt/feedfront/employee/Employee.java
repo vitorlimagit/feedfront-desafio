@@ -13,8 +13,7 @@ public class Employee {
     private String nome;
     private String sobrenome;
     private String email;
-
-    String arquivoCriado = "arquivo.extensao"; //TODO: alterar de acordo com a sua implementação
+    private String arquivo = "arquivo.extensao"; //TODO: alterar de acordo com a sua implementação
 
     public Employee(String nome, String sobrenome, String email) throws ComprimentoInvalidoException {
         this.id = UUID.randomUUID().toString();
