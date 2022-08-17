@@ -2,7 +2,6 @@ package com.ciandt.feedfront.daos;
 
 import com.ciandt.feedfront.contracts.DAO;
 import com.ciandt.feedfront.excecoes.EntidadeNaoSerializavelException;
-import com.ciandt.feedfront.models.Feedback;
 
 import java.io.*;
 import java.nio.file.Files;

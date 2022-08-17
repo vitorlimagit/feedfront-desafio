@@ -1,10 +1,11 @@
-package com.ciandt.feedfront.services;
+package com.ciandt.feedfront.controllers;
 
 import com.ciandt.feedfront.contracts.DAO;
 import com.ciandt.feedfront.contracts.Service;
 import com.ciandt.feedfront.excecoes.BusinessException;
 import com.ciandt.feedfront.excecoes.ComprimentoInvalidoException;
 import com.ciandt.feedfront.excecoes.EntidadeNaoEncontradaException;
+import com.ciandt.feedfront.services.FeedbackService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -34,7 +35,7 @@ public class FeedbackServiceTest {
 
     @BeforeEach
     @SuppressWarnings("unchecked")
-    public void initEach() throws IOException, BusinessException, ComprimentoInvalidoException {
+    public void initEach() throws IOException, BusinessException {
         feedbackDAO = (DAO<Feedback>) Mockito.mock(DAO.class);
         employeeService = (Service<Employee>) Mockito.mock(Service.class);
 
@@ -93,7 +94,7 @@ public class FeedbackServiceTest {
     }
 
     @Test
-    public void buscar() throws IOException, BusinessException, ComprimentoInvalidoException {
+    public void buscar() throws IOException, BusinessException {
         Feedback feedbackNaoSalvo = new Feedback(localDate, autor, proprietario, "ttt");
 
         String idValido = feedback.getId();

@@ -7,7 +7,6 @@ import com.ciandt.feedfront.excecoes.ArquivoException;
 import com.ciandt.feedfront.excecoes.BusinessException;
 import com.ciandt.feedfront.excecoes.EmailInvalidoException;
 import com.ciandt.feedfront.excecoes.EntidadeNaoEncontradaException;
-import com.ciandt.feedfront.models.Employee;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

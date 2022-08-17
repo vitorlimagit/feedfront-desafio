@@ -1,7 +1,6 @@
 package com.ciandt.feedfront.daos;
 
 import com.ciandt.feedfront.contracts.DAO;
-import com.ciandt.feedfront.models.Employee;
 import com.ciandt.feedfront.excecoes.EntidadeNaoSerializavelException;
 
 import java.io.*;

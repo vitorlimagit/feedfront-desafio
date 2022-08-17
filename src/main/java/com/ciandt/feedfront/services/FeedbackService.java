@@ -6,8 +6,6 @@ import com.ciandt.feedfront.daos.FeedbackDAO;
 import com.ciandt.feedfront.excecoes.ArquivoException;
 import com.ciandt.feedfront.excecoes.BusinessException;
 import com.ciandt.feedfront.excecoes.EntidadeNaoEncontradaException;
-import com.ciandt.feedfront.models.Employee;
-import com.ciandt.feedfront.models.Feedback;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
