@@ -36,7 +36,7 @@ public class FeedbackServiceTest {
 
     @BeforeEach
     @SuppressWarnings("unchecked")
-    public void initEach() throws IOException, BusinessException {
+    public void initEach() throws IOException, BusinessException, ComprimentoInvalidoException {
         feedbackDAO = (DAO<Feedback>) Mockito.mock(DAO.class);
         employeeService = (Service<Employee>) Mockito.mock(Service.class);
 
@@ -95,7 +95,7 @@ public class FeedbackServiceTest {
     }
 
     @Test
-    public void buscar() throws IOException, BusinessException {
+    public void buscar() throws IOException, BusinessException, ComprimentoInvalidoException {
         Feedback feedbackNaoSalvo = new Feedback(localDate, autor, proprietario, "ttt");
 
         String idValido = feedback.getId();
