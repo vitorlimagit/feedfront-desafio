@@ -1,9 +1,7 @@
 package com.ciandt.feedfront.models;
 
 import com.ciandt.feedfront.exceptions.ComprimentoInvalidoException;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -11,12 +9,11 @@ import java.time.LocalDate;
 
 //TODO: UTILIZE ANOTAÇÕES DO LOMBOK COMO @ALLARGSCONSTRUTOR E RETIRE O QUE NÃO FOR MAIS NECESSÁRIO COMO O CONSTRUTOR COM TODOS OS ARGUMENTOS. DEIXE SEU CÓDIGO MAIS SUSCINTO.
 
-
-@Data
 @Entity
-@Table(name="tb_feedback")
+@Getter
+@Setter
 @NoArgsConstructor
-@AllArgsConstructor
+@Table(name="tb_feedback")
 public class Feedback {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,6 +27,8 @@ public class Feedback {
     private String comoMelhora;
     @Column
     private LocalDate data;
+
+
 
     @ManyToOne //(fetch = FetchType.EAGER)
     @JoinColumn(name = "autor_id")
